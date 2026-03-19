@@ -1,0 +1,5 @@
+fastapi==0.115.6
+uvicorn==0.34.0
+Pillow==11.1.0
+openai==1.82.0
+httpx==0.28.1
