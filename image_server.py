@@ -229,7 +229,7 @@ def overlay_text_on_image(img: Image.Image, media_type: str,
         elements_height += ph
     
     # Draw a semi-transparent dark band behind all text
-    band_padding = 24
+    band_padding = 32
     band_top = int(title_y_center - elements_height / 2 - band_padding)
     band_bottom = int(title_y_center + elements_height / 2 + band_padding)
     
@@ -238,7 +238,7 @@ def overlay_text_on_image(img: Image.Image, media_type: str,
     band_bottom = min(h, band_bottom)
     
     # Semi-transparent dark overlay band for text readability
-    band = Image.new("RGBA", (w, band_bottom - band_top), (0, 40, 80, 140))
+    band = Image.new("RGBA", (w, band_bottom - band_top), (0, 30, 70, 180))
     txt_layer.paste(band, (0, band_top))
     # Recreate draw after paste
     draw = ImageDraw.Draw(txt_layer)
