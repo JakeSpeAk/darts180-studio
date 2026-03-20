@@ -36,8 +36,8 @@ TARGET_SIZES = {
     "product_review_media": (1600, 900),
 }
 
-# Minimum inner margin in pixels
-INNER_MARGIN = 20
+# Minimum inner margin in pixels (matches the 60px safe zone in prompts)
+INNER_MARGIN = 30
 
 
 def apply_inner_margin(generated_img_bytes: bytes, media_type: str) -> bytes:
