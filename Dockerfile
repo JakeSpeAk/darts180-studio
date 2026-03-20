@@ -16,6 +16,9 @@ RUN python3 -m pip install --no-cache-dir --break-system-packages -r requirement
 COPY image_server.py generate_image.py ./
 COPY logo-light.jpg logo-dark.jpg ./
 
+# Copy fonts for text overlay rendering
+COPY fonts/ ./fonts/
+
 # Copy built Node.js app
 COPY dist/ ./dist/
 
